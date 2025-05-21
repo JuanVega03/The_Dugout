@@ -1,0 +1,205 @@
+{
+  "date": "2023-05-15",
+  "matchups": [
+    {
+      "game_id": "mlb-2023-05-15-nyy-bos",
+      "home_team": {
+        "name": "Yankees",
+        "abbr": "NYY",
+        "record": "26-16",
+        "stats": {
+          "batting_avg": 0.255,
+          "runs_per_game": 5.2,
+          "home_runs": 62,
+          "era": 3.45,
+          "whip": 1.18,
+          "last_10": "7-3"
+        }
+      },
+      "away_team": {
+        "name": "Red Sox",
+        "abbr": "BOS",
+        "record": "22-20",
+        "stats": {
+          "batting_avg": 0.262,
+          "runs_per_game": 4.8,
+          "home_runs": 48,
+          "era": 4.12,
+          "whip": 1.32,
+          "last_10": "5-5"
+        }
+      },
+      "pitchers": {
+        "home": {
+          "name": "Gerrit Cole",
+          "hand": "R",
+          "era": 2.75,
+          "wins": 5,
+          "losses": 0,
+          "strikeouts": 58
+        },
+        "away": {
+          "name": "James Paxton",
+          "hand": "L",
+          "era": 3.65,
+          "wins": 3,
+          "losses": 1,
+          "strikeouts": 42
+        }
+      },
+      "venue": "Yankee Stadium",
+      "weather": "Clear, 72°F, Wind 12mph out to RF",
+      "start_time": "7:05 PM ET"
+    },
+    {
+      "game_id": "mlb-2023-05-15-lad-sf",
+      "home_team": {
+        "name": "Dodgers",
+        "abbr": "LAD",
+        "record": "28-14",
+        "stats": {
+          "batting_avg": 0.258,
+          "runs_per_game": 5.5,
+          "home_runs": 70,
+          "era": 3.25,
+          "whip": 1.15,
+          "last_10": "8-2"
+        }
+      },
+      "away_team": {
+        "name": "Giants",
+        "abbr": "SF",
+        "record": "20-22",
+        "stats": {
+          "batting_avg": 0.245,
+          "runs_per_game": 4.3,
+          "home_runs": 52,
+          "era": 4.1,
+          "whip": 1.28,
+          "last_10": "4-6"
+        }
+      },
+      "pitchers": {
+        "home": {
+          "name": "Clayton Kershaw",
+          "hand": "L",
+          "era": 2.35,
+          "wins": 6,
+          "losses": 2,
+          "strikeouts": 62
+        },
+        "away": {
+          "name": "Logan Webb",
+          "hand": "R",
+          "era": 3.8,
+          "wins": 3,
+          "losses": 5,
+          "strikeouts": 48
+        }
+      },
+      "venue": "Dodger Stadium",
+      "weather": "Clear, 68°F, Wind 5mph",
+      "start_time": "10:10 PM ET"
+    },
+    {
+      "game_id": "mlb-2023-05-15-hou-tex",
+      "home_team": {
+        "name": "Astros",
+        "abbr": "HOU",
+        "record": "24-18",
+        "stats": {
+          "batting_avg": 0.248,
+          "runs_per_game": 4.7,
+          "home_runs": 58,
+          "era": 3.35,
+          "whip": 1.2,
+          "last_10": "7-3"
+        }
+      },
+      "away_team": {
+        "name": "Rangers",
+        "abbr": "TEX",
+        "record": "25-16",
+        "stats": {
+          "batting_avg": 0.268,
+          "runs_per_game": 5.8,
+          "home_runs": 65,
+          "era": 3.85,
+          "whip": 1.25,
+          "last_10": "6-4"
+        }
+      },
+      "pitchers": {
+        "home": {
+          "name": "Framber Valdez",
+          "hand": "L",
+          "era": 2.45,
+          "wins": 4,
+          "losses": 2,
+          "strikeouts": 52
+        },
+        "away": {
+          "name": "Nathan Eovaldi",
+          "hand": "R",
+          "era": 3.22,
+          "wins": 5,
+          "losses": 2,
+          "strikeouts": 46
+        }
+      },
+      "venue": "Minute Maid Park",
+      "weather": "Dome",
+      "start_time": "8:05 PM ET"
+    },
+    {
+      "game_id": "mlb-2023-05-15-chc-stl",
+      "home_team": {
+        "name": "Cubs",
+        "abbr": "CHC",
+        "record": "19-23",
+        "stats": {
+          "batting_avg": 0.245,
+          "runs_per_game": 4.2,
+          "home_runs": 45,
+          "era": 3.95,
+          "whip": 1.3,
+          "last_10": "4-6"
+        }
+      },
+      "away_team": {
+        "name": "Cardinals",
+        "abbr": "STL",
+        "record": "18-24",
+        "stats": {
+          "batting_avg": 0.265,
+          "runs_per_game": 4.5,
+          "home_runs": 42,
+          "era": 4.25,
+          "whip": 1.35,
+          "last_10": "5-5"
+        }
+      },
+      "pitchers": {
+        "home": {
+          "name": "Justin Steele",
+          "hand": "L",
+          "era": 3.15,
+          "wins": 4,
+          "losses": 1,
+          "strikeouts": 38
+        },
+        "away": {
+          "name": "Miles Mikolas",
+          "hand": "R",
+          "era": 3.75,
+          "wins": 2,
+          "losses": 2,
+          "strikeouts": 32
+        }
+      },
+      "venue": "Wrigley Field",
+      "weather": "Partly Cloudy, 65°F, Wind 12mph in from RF",
+      "start_time": "7:15 PM ET"
+    }
+  ]
+}

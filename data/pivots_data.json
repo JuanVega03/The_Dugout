@@ -1,0 +1,185 @@
+{
+  "date": "2023-05-15",
+  "games": [
+    {
+      "game_id": "mlb-2023-05-15-nyy-bos",
+      "home_team": "Yankees",
+      "away_team": "Red Sox",
+      "status": "Scheduled",
+      "start_time": "7:05 PM ET",
+      "predictions": [
+        {
+          "id": "pred-1",
+          "type": "spread",
+          "prediction": "Yankees -1.5",
+          "confidence": 85,
+          "analysis": [
+            "Yankees' starting pitcher has a 1.87 ERA in last 5 starts vs Boston",
+            "Yankees are 7-3 against the spread in their last 10 home games",
+            "Red Sox bullpen has struggled with a 4.56 ERA in the last week",
+            "Yankees have won by 2+ runs in 6 of their last 8 games against Boston"
+          ]
+        },
+        {
+          "id": "pred-2",
+          "type": "moneyline",
+          "prediction": "Yankees ML",
+          "confidence": 78,
+          "analysis": [
+            "Yankees have won 6 of their last 8 home games against Boston",
+            "Yankees' offense is averaging 5.3 runs per game in their last 10 games",
+            "Red Sox are 3-7 in their last 10 road games",
+            "Yankees have a significant advantage in starting pitching for this matchup"
+          ]
+        },
+        {
+          "id": "pred-3",
+          "type": "total",
+          "prediction": "Over 8.5 runs",
+          "confidence": 72,
+          "analysis": [
+            "The over has hit in 7 of the last 10 meetings between these teams",
+            "Both teams rank in the top 10 in runs scored per game",
+            "Wind is blowing out to right field at 12 mph",
+            "Red Sox starting pitcher has allowed 4+ runs in 3 of his last 4 starts"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "mlb-2023-05-15-lad-sf",
+      "home_team": "Dodgers",
+      "away_team": "Giants",
+      "status": "Scheduled",
+      "start_time": "10:10 PM ET",
+      "predictions": [
+        {
+          "id": "pred-4",
+          "type": "spread",
+          "prediction": "Dodgers -1.5",
+          "confidence": 76,
+          "analysis": [
+            "Dodgers have covered the -1.5 run line in 6 of their last 8 home games",
+            "Giants are 2-6 against the spread in their last 8 road games",
+            "Dodgers' offense has scored 5+ runs in 7 of their last 10 games",
+            "Dodgers' starting pitcher has a 2.15 ERA at home this season"
+          ]
+        },
+        {
+          "id": "pred-5",
+          "type": "moneyline",
+          "prediction": "Dodgers ML",
+          "confidence": 82,
+          "analysis": [
+            "Dodgers are 8-2 in their last 10 home games against the Giants",
+            "Dodgers have a significant advantage in bullpen ERA (3.25 vs 4.10)",
+            "Giants are missing two key players due to injury",
+            "Dodgers have won 12 of their last 15 home games"
+          ]
+        },
+        {
+          "id": "pred-6",
+          "type": "total",
+          "prediction": "Over 8.5 runs",
+          "confidence": 78,
+          "analysis": [
+            "The over has hit in 8 of the last 10 meetings at Dodger Stadium",
+            "Both teams rank in the top 8 in home runs this season",
+            "Weather conditions are favorable for hitting with warm temperatures",
+            "Giants' starting pitcher has allowed 12 runs in his last 15 innings"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "mlb-2023-05-15-hou-tex",
+      "home_team": "Astros",
+      "away_team": "Rangers",
+      "status": "Scheduled",
+      "start_time": "8:05 PM ET",
+      "predictions": [
+        {
+          "id": "pred-7",
+          "type": "spread",
+          "prediction": "Astros -1.5",
+          "confidence": 72,
+          "analysis": [
+            "Astros have covered the -1.5 run line in 5 of their last 7 home games",
+            "Rangers are 3-7 against the spread in their last 10 road games",
+            "Astros' starting pitcher has a 2.35 ERA against the Rangers in his career",
+            "Astros have won by 2+ runs in 6 of their last 8 wins"
+          ]
+        },
+        {
+          "id": "pred-8",
+          "type": "moneyline",
+          "prediction": "Astros ML",
+          "confidence": 80,
+          "analysis": [
+            "Astros are 9-1 in their last 10 home games against the Rangers",
+            "Astros have a significant advantage in starting pitching for this matchup",
+            "Rangers' bullpen has struggled with a 4.75 ERA in the last two weeks",
+            "Astros have won 14 of their last 18 home games"
+          ]
+        },
+        {
+          "id": "pred-9",
+          "type": "total",
+          "prediction": "Under 8.5 runs",
+          "confidence": 68,
+          "analysis": [
+            "The under has hit in 6 of the last 9 meetings between these teams",
+            "Astros' starting pitcher has allowed 2 or fewer runs in 7 of his last 8 starts",
+            "Rangers' offense has averaged just 3.8 runs per game in their last 10 road games",
+            "Weather conditions include a light wind blowing in from center field"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": "mlb-2023-05-15-chc-stl",
+      "home_team": "Cubs",
+      "away_team": "Cardinals",
+      "status": "Scheduled",
+      "start_time": "7:15 PM ET",
+      "predictions": [
+        {
+          "id": "pred-10",
+          "type": "spread",
+          "prediction": "Cardinals +1.5",
+          "confidence": 74,
+          "analysis": [
+            "Cardinals have covered the +1.5 run line in 8 of their last 10 road games",
+            "Cubs have struggled at home with a 4-6 record in their last 10 home games",
+            "Cardinals' offense has been more consistent, scoring 4+ runs in 7 of their last 9 games",
+            "Historical rivalry games tend to be close, with 7 of the last 10 decided by 1 run"
+          ]
+        },
+        {
+          "id": "pred-11",
+          "type": "moneyline",
+          "prediction": "Cardinals ML",
+          "confidence": 65,
+          "analysis": [
+            "Cardinals have won 6 of their last 10 games at Wrigley Field",
+            "Cardinals' starting pitcher has a 2.85 ERA against the Cubs in his career",
+            "Cubs' bullpen has blown 3 saves in their last 7 games",
+            "Cardinals have a better team batting average (.265 vs .245)"
+          ]
+        },
+        {
+          "id": "pred-12",
+          "type": "total",
+          "prediction": "Under 7.5 runs",
+          "confidence": 70,
+          "analysis": [
+            "The under has hit in 6 of the last 8 meetings between these teams",
+            "Both starting pitchers have ERAs under 3.50",
+            "Weather forecast shows a 12 mph wind blowing in from right field",
+            "Both teams rank in the bottom half of the league in runs scored per game"
+          ]
+        }
+      ]
+    }
+  ]
+}
