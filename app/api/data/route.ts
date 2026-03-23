@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server"
 import fs from "fs"
 import path from "path"
-import type { PivotsData, MatchupsData } from "@/types/data"
 
-// Helper function to read JSON files
 const readJsonFile = (filePath: string) => {
   try {
     const fullPath = path.join(process.cwd(), filePath)
@@ -20,33 +18,40 @@ export async function GET(request: Request) {
   const type = searchParams.get("type")
 
   try {
-    if (type === "pivots") {
-      const data = readJsonFile("data/pivots_data.json") as PivotsData
-      return NextResponse.json(data)
-    } else if (type === "matchups") {
-      const data = readJsonFile("data/matchups_data.json") as MatchupsData
-      return NextResponse.json(data)
-    } else if (type === "all") {
-      const pivots = readJsonFile("data/pivots_data.json") as PivotsData
-      const matchups = readJsonFile("data/matchups_data.json") as MatchupsData
+    const matchups = readJsonFile("data/matchups_data.json")
 
-      // Combine data for a more comprehensive response
-      const combinedData = {
-        date: pivots?.date || matchups?.date,
-        games:
-          pivots?.games.map((game) => {
-            const matchup = matchups?.matchups.find((m) => m.game_id === game.game_id)
-            return {
-              ...game,
-              matchup: matchup || null,
-            }
-          }) || [],
-      }
-
-      return NextResponse.json(combinedData)
-    } else {
-      return NextResponse.json({ error: "Invalid data type requested" }, { status: 400 })
+    if (!matchups) {
+      return NextResponse.json({ error: "Data not available" }, { status: 404 })
     }
+
+    if (type === "matchups") {
+      return NextResponse.json(matchups)
+    }
+
+    // For "all" or default, return the full algorithm output
+    // Extract games with picks (positive edge) for featured/predictions
+    const picks = matchups.games
+      ?.flatMap((game: any) => {
+        const sides = []
+        if (game.away?.tier && game.away.tier !== "NO_PLAY") {
+          sides.push({ ...game.away, game_number: game.game_number, game_time: game.game_time, opponent: game.home?.team })
+        }
+        if (game.home?.tier && game.home.tier !== "NO_PLAY") {
+          sides.push({ ...game.home, game_number: game.game_number, game_time: game.game_time, opponent: game.away?.team })
+        }
+        return sides
+      })
+      .sort((a: any, b: any) => (a.pick_rank || 99) - (b.pick_rank || 99)) || []
+
+    return NextResponse.json({
+      date: matchups.date,
+      generated_at: matchups.generated_at,
+      algorithm_version: matchups.algorithm_version,
+      games: matchups.games,
+      picks,
+      summary: matchups.summary,
+      config: matchups.config,
+    })
   } catch (error) {
     console.error("Error processing data request:", error)
     return NextResponse.json({ error: "Failed to process data request" }, { status: 500 })
