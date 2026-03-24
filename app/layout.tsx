@@ -1,54 +1,41 @@
-import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import { AuthProvider } from "@/contexts/auth-context"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "The Dugout | MLB Stats & Predictions",
-  description: "Your premier destination for MLB statistics, predictions, and betting insights",
-    generator: 'v0.dev'
+  title: "The Dugout | MLB Picks & Predictions",
+  description: "Algorithm-powered MLB picks with edge analysis, model win probabilities, and Kelly criterion sizing.",
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <head>
-        <style>
-          {`
-            :root {
-              --color-hr: hsl(var(--chart-1));
-              --color-avg: hsl(var(--chart-2));
-              --color-era: hsl(var(--chart-3));
-              --color-so: hsl(var(--chart-4));
-              --color-wins: hsl(var(--chart-1));
-              --color-runs: hsl(var(--chart-2));
-              --color-obp: hsl(var(--chart-3));
-              --color-slg: hsl(var(--chart-4));
-            }
-          `}
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <AuthProvider>
-            <div className="flex min-h-screen flex-col">
-              <Navbar />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </AuthProvider>
-        </ThemeProvider>
+      <body className="min-h-screen bg-[#0a0f1a] text-white antialiased">
+        {children}
       </body>
     </html>
   )
+}
+ENDOF
+ 
+head -5 app/layout.tsx
+cd ~/Desktop/The_Dugout
+cat > middleware.ts << 'ENDOFFILE'
+import { NextResponse } from "next/server"
+import type { NextRequest } from "next/server"
+
+export function middleware(req: NextRequest) {
+  return NextResponse.next()
+}
+
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.svg).*)"],
 }
