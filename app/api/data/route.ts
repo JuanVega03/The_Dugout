@@ -1,38 +1,21 @@
 import { NextResponse } from "next/server"
-import fs from "fs"
-import path from "path"
-
-const readJsonFile = (filePath: string) => {
-  try {
-    const fullPath = path.join(process.cwd(), filePath)
-    const fileContents = fs.readFileSync(fullPath, "utf8")
-    return JSON.parse(fileContents)
-  } catch (error) {
-    console.error(`Error reading file from ${filePath}:`, error)
-    return null
-  }
-}
+import matchups from "@/data/matchups_data.json"
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const type = searchParams.get("type")
+  const data = matchups as any
 
   try {
-    const matchups = readJsonFile("data/matchups_data.json")
-
-    if (!matchups) {
+    if (!data) {
       return NextResponse.json({ error: "Data not available" }, { status: 404 })
     }
-
     if (type === "matchups") {
-      return NextResponse.json(matchups)
+      return NextResponse.json(data)
     }
-
-    // For "all" or default, return the full algorithm output
-    // Extract games with picks (positive edge) for featured/predictions
-    const picks = matchups.games
+    const picks = data.games
       ?.flatMap((game: any) => {
-        const sides = []
+        const sides: any[] = []
         if (game.away?.tier && game.away.tier !== "NO_PLAY") {
           sides.push({ ...game.away, game_number: game.game_number, game_time: game.game_time, opponent: game.home?.team })
         }
@@ -44,16 +27,16 @@ export async function GET(request: Request) {
       .sort((a: any, b: any) => (a.pick_rank || 99) - (b.pick_rank || 99)) || []
 
     return NextResponse.json({
-      date: matchups.date,
-      generated_at: matchups.generated_at,
-      algorithm_version: matchups.algorithm_version,
-      games: matchups.games,
+      date: data.date,
+      generated_at: data.generated_at,
+      algorithm_version: data.algorithm_version,
+      games: data.games,
       picks,
-      summary: matchups.summary,
-      config: matchups.config,
+      summary: data.summary,
+      config: data.config,
     })
   } catch (error) {
-    console.error("Error processing data request:", error)
-    return NextResponse.json({ error: "Failed to process data request" }, { status: 500 })
+    console.error("Error:", error)
+    return NextResponse.json({ error: "Failed" }, { status: 500 })
   }
 }
