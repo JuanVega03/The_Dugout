@@ -3,7 +3,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "The Dugout | MLB Picks & Predictions",
-  description: "Algorithm-powered MLB picks with edge analysis, model win probabilities, and Kelly criterion sizing.",
+  description: "Algorithm-powered MLB picks with edge analysis",
 }
 
 export default function RootLayout({
